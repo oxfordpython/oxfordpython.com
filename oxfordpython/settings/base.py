@@ -19,12 +19,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=+)7hj45f701_228*u+r%+%u6qe0ayrbh&uu7w$bxiphjab(6y'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -120,3 +114,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Load development settings based on DJANGO_MODE environment variable
+if os.environ.get('DJANGO_MODE', 'PRODUCTION') == 'DEVELOPMENT':
+    from .development import *
+else:
+    from .production import *
+
+# Try and import local settings which can be used to override any of the above.
+try:
+    from .local import *
+except ImportError:
+    pass
