@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #18bc9c;
+  color: #3776AB;
   outline: none;
 }
 h1,
@@ -54,7 +54,7 @@ hr.star-light {
   border-color: white;
 }
 hr.star-light:after {
-  background-color: #18bc9c;
+  background-color: #3776AB;
   color: white;
 }
 hr.star-primary {
@@ -69,7 +69,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #18bc9c;
+  background: #3776AB;
   color: white;
 }
 header .container {
@@ -83,7 +83,7 @@ header img {
 header .intro-text .name {
   display: block;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-weight: 700;
   font-size: 2em;
 }
@@ -115,6 +115,7 @@ header .intro-text .skills {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    text-transform: capitalize !important;
   }
   .navbar-fixed-top.navbar-shrink {
     padding: 10px 0;
@@ -149,7 +150,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #18bc9c;
+  background: #3776AB;
   color: white;
 }
 section.success a,
@@ -228,7 +229,7 @@ section.success a.active {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: #18bc9c;
+  color: #3776AB;
   background: white;
   border: solid 2px white;
 }
@@ -276,7 +277,7 @@ section.success a.active {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #18bc9c;
+  color: #3776AB;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
